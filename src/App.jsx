@@ -10,10 +10,6 @@ export default function App() {
   const [filter, setFilter] = useState('');
 
   useEffect(() => {
-    setContacts(JSON.parse(localStorage.getItem('contacts')));
-  }, []);
-
-  useEffect(() => {
     localStorage.setItem('contacts', JSON.stringify(contacts));
   }, [contacts]);
 
@@ -59,4 +55,3 @@ export default function App() {
     </Container>
   );
 };
-  
