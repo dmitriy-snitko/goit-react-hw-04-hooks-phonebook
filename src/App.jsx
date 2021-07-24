@@ -33,7 +33,7 @@ class App extends Component {
     }))
   }
 
-  addContact = ({ name, number }) => {
+  addContact = (name, number) => {
     const normalizedName = name.toLowerCase();
     const isAlreadyinContacts = this.state.contacts.find(el => el.name.toLowerCase() === normalizedName);
 
