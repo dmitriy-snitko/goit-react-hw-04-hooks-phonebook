@@ -1,7 +1,8 @@
 import { useState } from 'react';
 import { Form, SubmitBtn, Title } from './ContactForm.styles';
+import PropTypes from 'prop-types';
 
-function ContactForm({onSubmit}) {
+export default function ContactForm({onSubmit}) {
   const [name, setName] = useState('');
   const [number, setNumber] = useState('');
 
@@ -65,4 +66,6 @@ function ContactForm({onSubmit}) {
   )
 };
 
-export default ContactForm;
+ContactForm.propTypes = {
+  onSubmit: PropTypes.func.isRequired,
+};
