@@ -6,7 +6,7 @@ import Filter from './components/Filter/Filter';
 import { Container, Title } from './App.styles.jsx';
 
 export default function App() {
-  const [contacts, setContacts] = useState([]);
+  const [contacts, setContacts] = useState(JSON.parse(localStorage.getItem('contacts')) ?? []);
   const [filter, setFilter] = useState('');
 
   useEffect(() => {
